@@ -1,0 +1,27 @@
+<%- include('includes/header') %>
+
+<main class="converter-container">
+    <form class="converter-card" method="post" action="/<%=path%>">
+    <label for="value" >Enter the <%= path %> to convert</label><br>
+    <input type="number" placeholder="value" step="0.01" min="0" id="value" name="value" value="0" required><br>
+    <label for="from">Unit to Convert from</label>
+    <select id="from" name="from">
+        <% units.forEach (unit => {%>
+            <option value="<%= unit %>"><%= unit %></option>
+        <%})%>
+    </select >
+    <label for="to">Unit to Convert to</label>
+    <select id="to" name="to" >
+        <% units.forEach (unit => {%>
+            <option value="<%= unit %>"><%= unit %></option>
+        <%})%>
+    </select>
+    <button type="submit">Convert</button>
+</form>
+
+</main>
+
+
+
+
+<%- include('includes/footer')%>

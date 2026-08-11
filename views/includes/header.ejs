@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= path %> converter</title>
+    <link href="home.css" rel="stylesheet">
+</head>
+<body> 
+    <header>
+        <h1>Unit converter</h1></header>
+        
+    <div class="nav">
+        <a href="/length" class="<%= path=== 'length'? 'length' : '' %>" > length</a>
+        <a href="/weight" class="<%= path=== 'weight'? 'weight' : '' %>"> weight</a>
+        <a href="/temprature" class="<%= path=== 'temprature'? 'temprature' : '' %>"> temprature</a>
+    </div>
